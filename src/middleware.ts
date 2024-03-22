@@ -13,7 +13,7 @@ export async function jwtAuth(c: Context, next: Next) {
       return next();
     } catch (error) {
       c.status(401)
-      return c.json({ message: "Not asd" })
+      return c.json({ message: "Error handling token" })
     }
   }
 
