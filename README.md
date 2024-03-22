@@ -44,7 +44,7 @@ To use this application:
     bun run dev
     ```
 
-5. Access the application in your web browser at `http://localhost:8080`.
+5. Access the application in your web browser at `http://localhost:3000`.
 
 ## Authentication Flow
 
