@@ -1,6 +1,5 @@
-import { MiddlewareHandler, Next } from 'hono';
-import { Context } from 'hono';
-import { jwt, verify } from 'hono/jwt'; 
+import { Next, Context } from 'hono';
+import { verify } from 'hono/jwt';
 
 export async function jwtAuth(c: Context, next: Next) {
   const { authorization } = c.req.header()
@@ -22,4 +21,3 @@ export async function jwtAuth(c: Context, next: Next) {
     return c.json({ message: "Not Authorized" })
   }
 }
- 
