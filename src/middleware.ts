@@ -8,7 +8,7 @@ export async function jwtAuth(c: Context, next: Next) {
   if (authorization && authorization.startsWith("Bearer")) {
     try {
       token = authorization.split(" ")[1]
-      const decoded = await verify(token, "mySecretKey")
+      const decoded = await verify(token, process.env.JWT_SECRET as string)
       console.log(decoded)
       return next();
     } catch (error) {
